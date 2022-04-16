@@ -2,7 +2,11 @@ import boto3
 from botocore.exceptions import ClientError
 
 ### Learning Objective
-# 1. Send a mail when lambda has been triggered
+# 1. Set up IAM Role
+# 2. Send a mail when lambda has been triggered
+
+### Reference: boto3 -> SES
+# https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ses.html#SES.Client.send_email
 
 def lambda_handler(event,context):
     return send_mail_by_ses(
